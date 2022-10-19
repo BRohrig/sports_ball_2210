@@ -41,7 +41,7 @@ class Team
   end
 
   def average_cost_of_player
-    total_value / player_count
+    "$#{total_value / player_count}"
   end
 
   def last_names

@@ -98,7 +98,7 @@ RSpec.describe Team do
     team.add_player(player_3)
     team.add_player(player_4)
 
-    expect(team.average_cost_of_player).to eq(183250)
+    expect(team.average_cost_of_player).to eq("$183250")
   end
 
   it 'can sort player last names by alphabetical order' do
