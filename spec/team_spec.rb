@@ -10,7 +10,7 @@ RSpec.describe Team do
   it 'has a roster that starts out empty' do
     team = Team.new("Sounders", "Seattle")
 
-    expect(team.rost).to eq([])
+    expect(team.roster).to eq([])
   end
 
 
