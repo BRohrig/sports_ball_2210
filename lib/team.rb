@@ -43,4 +43,14 @@ class Team
   def average_cost_of_player
     total_value / player_count
   end
+
+  def last_names
+    @roster.map do |player|
+      player.last_name
+    end
+  end
+
+  def players_by_last_name
+    last_names.sort.join(", ")
+  end
 end
