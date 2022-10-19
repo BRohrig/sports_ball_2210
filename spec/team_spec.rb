@@ -28,6 +28,22 @@ RSpec.describe Team do
     team.add_player(player_2)
 
     expect(team.roster).to eq([player_1, player_2])
+    expect(team.player_count).to eq(2)
+  end
+
+  it 'has a method to list long term players' do
+    team = Team.new("Sounders", "Seattle")
+    player_1 = Player.new("Raul Ruidiaz", 10000, 25)
+    player_2 = Player.new("Joao Paulo", 12000, 12)
+    player_3 = Player.new("Fredy Montero", 5000, 3)
+    player_4 = Player.new("Jordan Morris", 9000, 36)
+    team.add_player(player_1)
+    team.add_player(player_2)
+    team.add_player(player_3)
+    team.add_player(player_4)
+
+    expect(team.long_term_players).to eq([player_1, player_4])
+
   end
   
 
