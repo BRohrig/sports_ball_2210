@@ -73,5 +73,18 @@ RSpec.describe Team do
     expect(team.total_value).to eq(733000)
   end
 
+  it 'gives has a method to give team details' do
+    team = Team.new("Sounders", "Seattle")
+    player_1 = Player.new("Raul Ruidiaz", 10000, 25)
+    player_2 = Player.new("Joao Paulo", 12000, 12)
+    player_3 = Player.new("Fredy Montero", 5000, 3)
+    player_4 = Player.new("Jordan Morris", 9000, 36)
+    team.add_player(player_1)
+    team.add_player(player_2)
+    team.add_player(player_3)
+    team.add_player(player_4)
+
+    expect(team.details).to eq({"total value" => 733000, "player_count" => 4})
+  end
 
 end
