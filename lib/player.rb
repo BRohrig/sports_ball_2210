@@ -13,5 +13,9 @@ class Player
   def total_cost
     @monthly_cost * @contract_length
   end
+
+  def set_nickname!(new_name)
+    @nickname = new_name
+  end
 end
 
