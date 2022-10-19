@@ -34,4 +34,9 @@ class Team
       player.total_cost
     end
   end
+
+  def details
+    {"total value" => total_value, 
+    "player_count" => player_count}
+  end
 end
