@@ -101,4 +101,18 @@ RSpec.describe Team do
     expect(team.average_cost_of_player).to eq(183250)
   end
 
+  it 'can sort player last names by alphabetical order' do
+    team = Team.new("Sounders", "Seattle")
+    player_1 = Player.new("Raul Ruidiaz", 10000, 25)
+    player_2 = Player.new("Joao Paulo", 12000, 12)
+    player_3 = Player.new("Fredy Montero", 5000, 3)
+    player_4 = Player.new("Jordan Morris", 9000, 36)
+    team.add_player(player_1)
+    team.add_player(player_2)
+    team.add_player(player_3)
+    team.add_player(player_4)
+
+    expect(team.players_by_last_name).to eq("Montero, Morris, Paulo, Ruidiaz")
+  end
+
 end
