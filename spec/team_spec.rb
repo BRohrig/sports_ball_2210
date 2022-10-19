@@ -13,6 +13,12 @@ RSpec.describe Team do
     expect(team.roster).to eq([])
   end
 
+  it 'can tell the number of player on the roster' do
+    team = Team.new("Sounders", "Seattle")
+
+    expect(team.player_count).to eq(0)
+  end
+
 
 
 end
