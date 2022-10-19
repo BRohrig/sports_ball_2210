@@ -9,6 +9,7 @@ class Team
     @roster = []
   end
 
-
-
+  def player_count
+    @roster.count
+  end
 end
