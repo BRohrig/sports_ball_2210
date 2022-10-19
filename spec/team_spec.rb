@@ -7,6 +7,12 @@ RSpec.describe Team do
     expect(team).to be_a(Team)
   end
 
+  it 'has a roster that starts out empty' do
+    team = Team.new("Sounders", "Seattle")
+
+    expect(team.rost).to eq([])
+  end
+
 
 
 end
